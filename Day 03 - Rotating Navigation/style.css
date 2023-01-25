@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap');
+
+:root {
+  --dark-gray: #333;
+  --soft-black: #222;
+  --soft-white: #fafafa;
+  --soft-pink: #ff7979;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+  background-color: var(--dark-gray);
+}
+
+body.overflow-hidden {
+  overflow-y: hidden;
+}
+
+.main-container {
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+  background-color: var(--soft-white);
+  transition: transform 1s linear;
+  transform-origin: top left ;
+  position: relative;
+}
+
+.main-container.rotated {
+  transform: rotate(-20deg);
+}
+
+.main-container.rotated .circle {
+  transform: rotate(-70deg);
+}
+
+.circle-container {
+  position: absolute;
+  top: -100px;
+  left: -100px;
+}
+
+.circle {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  background-color: var(--soft-pink);
+  transition: transform 1s linear;
+  position: relative;  /* for the buttons */
+}
+
+.circle button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background-color: transparent;
+  border: 0;
+  font-size: 26px;
+  color: var(--soft-white);
+  cursor: pointer;
+}
+
+.circle button:focus {
+  outline: none;
+}
+
+.circle button#open {
+  top: 45%;
+  left: 60%;
+}
+
+.circle button#close {
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+.content img {
+  max-width: 100%;
+  margin: 15px 0;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.content h1 {
+  margin-bottom: 5px;
+}
+
+.content small {
+  color: var(--soft-black);
+  font-style: italic;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.content p {
+  color: var(--dark-gray);
+  line-height: 1.5;
+  letter-spacing: .5px;
+  margin-bottom: 20px;
+}
+
+nav {
+  position: fixed;
+  bottom: 40px;
+  z-index: 100;
+}
+
+nav ul {
+  list-style: none;
+  padding-left: 30px;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: var(--soft-white);
+}
+
+nav ul li {
+  margin: 40px 0;
+  transition-delay: 0.7s;
+}
+
+nav.hidden ul li {
+  transform: translateX(-200%);
+}
+
+nav.visible ul li {
+  transform: translateX(0);
+}
+
+nav ul li i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+nav ul li + li {
+  margin-left: 15px;
+}
+
+nav ul li + li + li {
+  margin-left: 30px;
+}
