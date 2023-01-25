@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap');
+
+:root {
+  --white-color: #f6f7fb;
+  --black-color: #111133;
+  --gray-color: #aaaaaa;
+  --blue-color: #3498db;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', 'Open Sans', 'Roboto', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-container {
+  text-align: center;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  width: 300px;
+  position: relative;  /* for the bar */
+}
+
+.progress-bar {
+  position: absolute;   /* the progress is removed from the flex elements */
+  top: 50%;
+  transform: translateY(-50%);
+  height: 3px;
+}
+
+#progress-bar-back {
+  width: 100%;  
+  z-index: -100;  
+  background-color: var(--gray-color);
+}
+
+#progress-bar-front {
+  width: 0;  
+  z-index: -50;
+  background-color: var(--blue-color);
+  transition: width 1s ease;
+}
+
+.circle {
+  height: 35px;
+  width: 35px;
+  border: 3px solid var(--gray-color);
+  border-radius: 200px;
+  padding: 5px;
+  background-color: var(--white-color);
+  transition: border-color 1s;
+  font-weight: 600;
+}
+
+.circle.active {
+  border-color: var(--blue-color);
+}
+
+button {
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 2px solid var(--gray-color);
+  border-radius: 5px;
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  font-size: 14px;
+  transition: background-color .5s;
+}
+
+button:disabled {
+  cursor:not-allowed;
+  background-color: var(--gray-color);
+}
+
+button:active {
+  transform: scale(.98);
+}
