@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-image: linear-gradient(45deg, #7d5fff, #7158e2);
+}
+
+.input-container {
+  position: relative;
+  height: 50px;
+}
+
+.input-container input {
+  height: 30px;
+  width: 0px;
+  padding: 5px;
+  outline: none;
+  border: 0;
+  border-radius: 5px;
+  background-color: #fafafa;
+  font-size: 18px;
+  transition: width .2s ease;
+}
+
+.input-container input.active {
+  width: 200px;
+}
+
+.input-container button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-color: #fafafa;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  border-radius: 5px;
+  font-size: 20px;
+  transition: transform .2s ease;
+}
+
+.input-container button.active {
+  transform: translateX(190px);
+  border-radius: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
