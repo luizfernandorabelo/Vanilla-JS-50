@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Open+Sans:wght@400&family=Roboto:wght@400&display=swap');
+
+:root {
+  --dark-blue-color: rgb(30, 70, 100);
+  --soft-blue-color: rgb(50, 120, 170);
+  --white-color: #ddd;
+  --cyan-color: #aaddff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--soft-blue-color);
+  font-size: 100%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  height: 325px;
+  width: 300px;
+  padding: 5px 30px;
+  background-color: var(--dark-blue-color);
+  color: var(--white-color);
+  border-radius: .5rem;
+}
+
+form h3 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin: 10px 0 5px;
+}
+
+form .input-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+form .input-container label span {
+  font-weight: 900;
+  display: inline-block;
+  transition: transform .3s ease-in-out;
+}
+
+form .input-container label span.down {
+  transform: translateY(15px);
+}
+
+form .input-container label span.up {
+  transform: translateY(-5px);
+}
+
+form .input-container input[type=text] {
+  background-color: transparent;
+  height: 2rem;
+  font-size: 1.2rem;
+  color: var(--white-color);
+  padding: .2rem;
+  border: 0;
+  border-bottom: 1px solid var(--white-color);
+  outline: none;
+}
+
+form .input-container.focused label {
+  color: var(--cyan-color);
+}
+
+form .input-container.focused input {
+  border-color: var(--cyan-color);
+}
+
+#login-btn {
+  margin: 25px 0 20px;
+  height: 2rem;
+  cursor: pointer;
+  background-color: var(--cyan-color);
+  border: 0;
+  border-radius: 5px;
+}
+
+form p a {
+  text-decoration: none;
+  color: var(--cyan-color);
+}
