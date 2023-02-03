@@ -1,0 +1,57 @@
+@importurl('https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Open+Sans:wght@400&family=Roboto:wght@400&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-container {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+  text-align: center;
+}
+
+.inner-container {
+  height: 50px;
+  width: 125px;
+  border: 1.5px solid #222;
+  position: relative;
+}
+
+.inner-container .label {
+  position: absolute;
+  width: 100%;
+  top: -25px;
+}
+
+.inner-container .data {
+  position: absolute;
+  width: 100%;
+  top: 15px;
+  font-weight: 500;
+}
+
+.initial-message {
+  width: 80%;
+  max-width: 600px;
+  height: 40px;
+  text-align: center;
+  border: 1.5px solid #222;
+  border-radius: 5px;
+  padding: 10px 0;
+}
