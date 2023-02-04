@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Open+Sans:wght@300&family=Roboto:wght@300&display=swap');
+
+:root {
+  --default-bg-color: #ddd;
+  --emphasis-bg-color: #eee;
+  --border-color: #aaa;
+  --soft-shadow-color: #888;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--default-bg-color);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3%;
+}
+
+main h1 {
+  font-weight: bold;
+}
+
+.container {
+  width: 60%;
+  margin-top: 3%;
+}
+
+.card {
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px var(--soft-shadow-color), -1px -1px 3px var(--soft-shadow-color);
+  margin-bottom: 2%;
+  padding: 3% 5%;
+  transition: height .5s ease;
+  transition: background-color .5s ease;
+  height: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card.answer-focus {
+  height: 100px;
+  background-color: var(--emphasis-bg-color);
+}
+
+.card .card-question {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fa-angle-down, .fa-times-circle {
+  cursor: pointer;
+}
+
+.card-answer {
+  position: relative;
+}
+
+.fa-comment-dots {
+  font-size: 75px;
+  opacity: .05;
+  position: absolute;
+  top: -40px;
+  left: -30px;
+}
+
+p.display-none {
+  display: none;
+}
+
+p.display-initial {
+  display: initial;
+}
+
+p.text-answer {
+  font-weight: bold;
+}
+
+.fa.display-none {
+  display: none;
+}
+
+.fa.display-initial {
+  display: initial;
+}
