@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300');
+
+:root {
+  --primary-color: #333;
+  --secondary-color: #ddd;
+  --tertiary-color: #e74c3c;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html.dark {
+  --primary-color: #ddd;
+  --secondary-color: #333;
+}
+
+body {
+  font-family: 'Heebo', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  transition: all .3s ease-in;
+}
+
+#toggle-btn {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  top: 10vh;
+  cursor: pointer;
+}
+
+#toggle-btn:active {
+  outline: 0;
+}
+
+#clock-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#clock {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.hand {
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 4px;
+  transform-origin: bottom center;
+}
+
+#hour-hand {
+  height: 65px;
+  transform: translate(-50%, -100%) rotate(0deg);
+}
+
+#minute-hand {
+  height: 100px;
+  transform: translate(-50%, -100%) rotate(0deg);
+}
+
+#second-hand {
+  height: 100px;
+  transform: translate(-50%, -100%) rotate(0deg);
+  background-color: var(--tertiary-color);
+}
+
+#center-point {
+  background-color: var(--tertiary-color);
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+#center-point::after {
+  content: '';
+  background-color: var(--primary-color);
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+#time {
+  font-size: 60px;
+}
+
+#date {
+  color: gray;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+}
+
+#day {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin-left: 5px;
+}
