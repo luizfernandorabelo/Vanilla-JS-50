@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+small {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.fa-heart {
+  color: red;
+}
+
+#post-div {
+  height: 440px;
+  width: 300px;
+  background: url("https://www.photoshopbuzz.com/wp-content/uploads/change-color-part-of-image-psd4.jpg") no-repeat center center/cover;
+  max-width: 100%;
+  position: relative;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, .25), 0 10px 10px rgba(0, 0, 0, .25);
+  cursor: pointer;
+}
+
+#post-div .fa-heart {
+  position: absolute;
+  animation: heart-grow .6s linear;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+@keyframes heart-grow {
+  to {
+    transform: translate(-50%, -50%) scale(10);
+    opacity: 0;
+  }
+}
