@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="#" type="image/x-icon">
+  <link rel="stylesheet" href="./style.css">
+  <title>Password Generator</title>
+</head>
+<body>
+  <div id="main-container">
+    <p>Password Generator</p>
+    <div id="password-container">
+      <span class="generated-password"></span>
+      <span><i class="fa fa-copy"></i></span>
+    </div>
+    <div class="input-container">
+      <label for="length">Password length</label>
+      <input type="number" name="length" id="length" min="1" max="20" value="8">
+    </div>
+    <div class="input-container">
+      <label for="uppercase-check">Include uppercase letters</label>
+      <input type="checkbox" name="uppercase-check" id="uppercase-check" checked="true">
+    </div>
+    <div class="input-container">
+      <label for="lowercase-check">Include lowercase letters</label>
+      <input type="checkbox" name="lowercase-check" id="lowercase-check" checked="true">
+    </div>
+    <div class="input-container">
+      <label for="number-check">Include numbers</label>
+      <input type="checkbox" name="number-check" id="number-check" checked="true">
+    </div>
+    <div class="input-container">
+      <label for="symbol-check">Include symbols</label>
+      <input type="checkbox" name="symbol-check" id="symbol-check" checked="true">
+    </div>
+    <button id="generate-pwd-btn">Generate Password</button>
+  </div>
+  <script src="https://kit.fontawesome.com/c4ab2c6d09.js" crossorigin="anonymous"></script>
+  <script src="./script.js"></script>
+</body>
+</html>
